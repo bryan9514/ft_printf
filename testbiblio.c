@@ -1,36 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   testbiblio.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 15:50:51 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/14 18:12:27 by brturcio         ###   ########.fr       */
+/*   Created: 2024/11/14 17:08:49 by brturcio          #+#    #+#             */
+/*   Updated: 2024/11/14 17:08:50 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 
-void	ft_printf(const char *str, ...)
+#include <stdarg.h>
+#include <stdio.h>
+
+int		sumaEdades(int n, ...)
 {
+	va_list args;
+	int sig;
 	int	i;
-	va_list	args;
-	va_start(args, str);
+	int total;
+	va_start(args, n);
 
-	while (str)
+	i = 0;
+	total = 0;
+	sig = 0;
+	while (i < n)
 	{
-		if(str[i] != '%')
-			ft_putchar(str[i]);
-		else
-			identify_type(str[i])
-		i++;		
+		sig = va_arg(args, int);
+		printf ("La edad n %d es de : %d\n", (i + 1), sig);
+		total += sig;
+		i++;
 	}
 	va_end(args);
+	return (total);
+
 }
 
-int	main(void)
+int		main(void)
 {
-	ft_printf("Hola %s, tienes %s mensajes.", "Bryan", "five");
+	int		x;
+
+	x = sumaEdades(5,   1, 2, 3, 4, 5);
+	printf ("La suma de las edades es %d\n", x);
 	return (0);
 }
