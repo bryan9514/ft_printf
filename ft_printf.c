@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:50:51 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/16 15:33:21 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/17 14:45:07 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			counter = ft_identify_type(str, i);
+			i++;
+			counter += ft_identify_type(args, str[i]);
 		}
 		else
-			ft_putchar(str[i]);
+			counter +=ft_putchar(str[i]);
 		i++;
 	}
 	va_end(args);
@@ -39,6 +40,6 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	ft_printf("Hola %s, tienes %d mensajes.", "Bryan", 5);
+	printf ("                  %d\n",ft_printf("Hola %s, tienes %d mensajes. Esto es un test", "Bryan", -2147483648));
 	return (0);
 }

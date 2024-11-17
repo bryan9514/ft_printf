@@ -6,12 +6,12 @@
 #    By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 17:08:44 by brturcio          #+#    #+#              #
-#    Updated: 2024/11/16 12:15:00 by brturcio         ###   ########.fr        #
+#    Updated: 2024/11/17 12:58:17 by brturcio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-FILES = $(addsuffix .c, ft_printf ft_putchar ft_putstr ft_putnum ft_identify_type)
+FILES = $(addsuffix .c, ft_printf ft_putchar ft_putstr ft_putnum ft_identify_type ft_puthexa)
 
 OBJS := $(FILES:%.c=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:13:42 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/16 15:40:54 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/17 11:55:37 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,48 +14,43 @@
 
 #include "ft_printf.h"
 
-void	ft_putunsig(unsigned int  nb)
+int	ft_putunsig(unsigned int  nb)
 {
-	unsigned int	c;
+	int	counter;
 
+	counter = 0;
 	if (nb > 9)
 	{
-		ft_putunsig(nb / 10);
-		ft_putunsig(nb % 10);
+		counter += ft_putunsig(nb / 10);
+		counter += ft_putunsig(nb % 10);
 	}
 	else
-	{
-		c = nb + '0';
-		ft_putchar (c);
-	}
+		counter += ft_putchar (nb + '0');
+	return (counter);
 }
 
 int	ft_putnbrint(int nb)
 {
-	int	c;
 	int counter;
 
+	counter = 0;
 	if (nb == -2147483648)
 	{
 		write (1, "-2147483648", 11);
-		return (11)
+		return (11);
 	}
 	else if (nb < 0)
 	{
-		ft_putchar ('-');
-		counter++;
-		ft_putnbrint(nb * -1);
+		counter += ft_putchar ('-');
+		counter += ft_putnbrint(nb * -1);
 	}
 	else if (nb > 9)
 	{
-		ft_putnbrint(nb / 10);
-		ft_putnbrint(nb % 10);
+		counter += ft_putnbrint(nb / 10);
+		counter += ft_putnbrint(nb % 10);
 	}
 	else
-	{
-		c = nb + '0';
-		ft_putchar (c);
-		counter++;
-	}
+		counter += ft_putchar (nb + '0');
+
 	return (counter);
 }

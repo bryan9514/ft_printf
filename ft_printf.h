@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:07:29 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/16 12:14:28 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/17 12:58:44 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-int		ft_identify_type(const char *str, int i);
-void	ft_putnbrint(int nb);
-void	ft_putunsig(unsigned int  nb);
-
+int	ft_printf(const char *str, ...);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int ft_identify_type(va_list args, const char c);
+int	ft_putnbrint(int nb);
+int	ft_putunsig(unsigned int  nb);
+int	ft_puthexa_lowercase(int nb);
 
 #endif

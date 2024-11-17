@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:02:14 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/16 15:37:16 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/17 11:56:56 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,21 @@
 // 	return (0);
 // }
 
-int	ft_identify_type(const char *str, int i)
+int	ft_identify_type(va_list args, const char c)
 {
 	int	counter;
-	va_list	args;
-	va_start(args, str);
 
-	if (str[i] == 'd' || str[i] == 'i')
-		counter = ft_putnbrint(va_arg(args, int));
-	if (str[i] == 's')
+	counter = 0;
+	if (c == 'c')
+		counter = ft_putchar(va_arg(args, int));
+	if (c == 's')
 		counter = ft_putstr(va_arg(args, char *));
-	// if (str[i] == 'x')
-	// 	counter = ft_
-	va_end(args)
+	if (c == 'd' || c == 'i')
+		counter = ft_putnbrint(va_arg(args, int));
+	if (c == 'u')
+		counter = ft_putunsig(va_arg(args, unsigned int));
+	if (c == '%')
+		counter = ft_putchar('%');
+
 	return (counter);
 }
