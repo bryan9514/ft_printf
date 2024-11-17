@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:08:39 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/16 10:53:15 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/16 15:09:46 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
+	if (!str)
+		write (1, "(null)", 6);
 	while (str[i])
 	{
 		ft_putchar(str[i]);
