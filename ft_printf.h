@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:07:29 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/18 21:39:05 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/18 21:47:50 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <limits.h> 
 
 int	ft_printf(const char *str, ...);
 int	ft_putchar(char c);
