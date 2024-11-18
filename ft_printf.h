@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:07:29 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/17 12:58:44 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/18 21:39:05 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	ft_putstr(char *str);
 int ft_identify_type(va_list args, const char c);
 int	ft_putnbrint(int nb);
 int	ft_putunsig(unsigned int  nb);
-int	ft_puthexa_lowercase(int nb);
+int	ft_puthexa_lowercase(unsigned int);
+int	ft_puthexa_uppercase(unsigned int nb);
+int	ft_putpointer(void *ptr);
 
 #endif

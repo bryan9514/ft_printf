@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:50:51 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/17 14:45:07 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:49:41 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,12 @@ int	ft_printf(const char *str, ...)
 	return (counter);
 }
 
-int	main(void)
-{
-	printf ("                  %d\n",ft_printf("Hola %s, tienes %d mensajes. Esto es un test", "Bryan", -2147483648));
-	return (0);
-}
+// int	main(void)
+// {
+// 	void *p;
+
+// 	p = NULL;
+// 	printf ("                  %d\n",ft_printf("Hola %s, tienes %p mensajes. Esto es un test", "Bryan", p));
+// 	printf ("                  %d\n",printf("Hola %s, tienes %p mensajes. Esto es un test", "Bryan", p));
+// 	return (0);
+// }
