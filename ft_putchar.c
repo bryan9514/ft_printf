@@ -6,16 +6,14 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:08:27 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/17 10:35:57 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/19 17:35:08 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
-	write (1, &c, 1);
-	
+	write(1, &c, 1);
 	return (1);
 }

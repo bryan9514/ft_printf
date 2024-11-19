@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:02:14 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/18 21:38:58 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/19 18:40:45 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,9 @@ int	ft_identify_type(va_list args, const char c)
 		counter = ft_putnbrint(va_arg(args, int));
 	if (c == 'u')
 		counter = ft_putunsig(va_arg(args, unsigned int));
-	if (c == 'x')
-		counter = ft_puthexa_lowercase(va_arg(args, unsigned int));
-	if (c == 'X')
-		counter = ft_puthexa_uppercase(va_arg(args, unsigned int));
+	if (c == 'x' || c == 'X')
+		counter = ft_puthexa(va_arg(args, unsigned int), c);
 	if (c == '%')
 		counter = ft_putchar('%');
-
 	return (counter);
 }
