@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:50:51 by brturcio          #+#    #+#             */
-/*   Updated: 2024/11/19 19:43:01 by brturcio         ###   ########.fr       */
+/*   Updated: 2024/11/23 10:52:17 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			i++;
-			counter += ft_identify_type(args, str[i]);
+			if (str[i + 1] != '\0')
+			{
+				counter += ft_identify_type(args, str[i + 1]);
+				i++;
+			}
 		}
 		else
 			counter += ft_putchar(str[i]);

@@ -6,7 +6,7 @@
 #    By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/14 17:08:44 by brturcio          #+#    #+#              #
-#    Updated: 2024/11/17 12:58:17 by brturcio         ###   ########.fr        #
+#    Updated: 2024/11/23 09:26:43 by brturcio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJS := $(FILES:%.c=%.o)
 
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
